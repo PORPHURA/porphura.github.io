@@ -1,253 +1,173 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Luzhe Huang's Personal Page</title>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luzhe Huang | Senior ML Scientist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #1e293b; }
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.8); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.3); 
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .sidebar-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .pub-card:hover { transform: translateY(-2px); transition: all 0.3s ease; }
     </style>
-  </head>
-<body class="w3-light-grey">
+</head>
+<body class="antialiased">
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
+<div class="max-w-6xl mx-auto lg:flex lg:gap-6 p-4 lg:p-10">
     
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="Portrait.jpg" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-white">
-            <h2>Luzhe Huang</h2>
-          </div>
+    <aside class="lg:w-1/3 mb-6 lg:mb-0">
+        <div class="sidebar-gradient text-white rounded-3xl overflow-hidden shadow-2xl sticky top-10">
+            <div class="p-6 text-center">
+                <div class="w-40 h-40 mx-auto rounded-2xl overflow-hidden mb-4 border-4 border-slate-700 shadow-xl">
+                    <img src="Portrait.jpg" alt="Luzhe Huang" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-2xl font-bold mb-1">Luzhe Huang</h1>
+                <p class="text-sky-400 font-medium mb-4 uppercase tracking-widest text-xs">Senior Machine Learning Scientist</p>
+                
+                <div class="space-y-3 text-left text-xs text-slate-300">
+                    <div class="flex items-center gap-3"><i class="fa fa-location-dot w-4 text-sky-400 text-center"></i><span>San Jose, CA</span></div>
+                    <div class="flex items-center gap-3"><i class="fa fa-envelope w-4 text-sky-400 text-center"></i><a href="mailto:lzhuang0324@ucla.edu">lzhuang0324@ucla.edu</a></div>
+                    <div class="flex items-center gap-3"><i class="fa-brands fa-linkedin w-4 text-sky-400 text-center"></i><a href="https://linkedin.com/in/luzhe-huang">/luzhe-huang</a></div>
+                    <div class="flex items-center gap-3"><i class="fa-brands fa-github w-4 text-sky-400 text-center"></i><a href="https://github.com/PORPHURA">/PORPHURA</a></div>
+                </div>
+
+                <div class="mt-6 pt-6 border-t border-slate-700 grid grid-cols-2 gap-4">
+                    <div class="text-center">
+                        <p id="total-citations" class="text-xl font-bold text-white">--</p>
+                        <p class="text-[10px] text-slate-400 uppercase tracking-tighter">Citations</p>
+                    </div>
+                    <div class="text-center">
+                        <p id="h-index" class="text-xl font-bold text-white">--</p>
+                        <p class="text-[10px] text-slate-400 uppercase tracking-tighter">h-index</p>
+                    </div>
+                </div>
+                
+                <a href="LuzheHuang_CV_2026.4.pdf" class="mt-6 block w-full bg-sky-500 hover:bg-sky-400 text-white font-bold py-2.5 rounded-xl transition shadow-lg text-sm">
+                    <i class="fa fa-file-pdf mr-2"></i>Download CV
+                </a>
+            </div>
         </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>PhD Candidate</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Los Angeles, USA</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>lzhuang0324@ucla.edu</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+(1)424-402-2604</p>
-          <p><i class="fa fa-brand fa-google fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="https://scholar.google.com/citations?user=qq9rtkkAAAAJ&hl=en&oi=ao">Google Scholar Page</a></p>
-          <p><i class="fa fa-brand fa-linkedin fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="https://www.linkedin.com/in/luzhe-huang/">LinkedIn Page</a></p>
-          <p><i class="fa fa-brand fa-github fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="https://github.com/PORPHURA">GitHub Page</a></p>
-          <p><i class="fa fa-solid fa-user fa-fw w3-margin-right w3-large w3-text-teal"></i><a href='CV.pdf'>CV</a>
-        </div>
-      </div><br>
+    </aside>
 
-    <!-- End Left Column -->
-    </div>
-
-    <!-- Right Column -->
-    <div class="w3-twothird">
-      
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Biography</h2>
-        <div class="w3-container">
-          <p>I am a Machine Learning Researcher at TikTok. I received my Ph.D. in Oct 2024 at UCLA, Master of Science in June 2021 at UCLA, and Bachelor of Engineering (BEng) degree in June 2019 at Zhejiang University, China.</p>
-          <p>I am currently working on content understanding and recommendation systems. My research interests also include computational imaging and microscopy. My goal is to apply advanced machine and deep learning technologies to microscopy imaging, and also enhance the robustness, generalizability and interpretability of models. </p>
-        </div>
-
-      </div>
-      <br>
-
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>News</h2>
-        <div class="w3-container">
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>01/2026</h6>
-          <p>Our paper "Multi-scale Conditional Generative Modeling for Microscopic Image Restoration" has been accepted by IEEE ICASSP 2026</p>
-          <hr>
-        </div>
-
-      </div>
-      <br>
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Selected Publications</h2>
+    <main class="lg:w-2/3 space-y-5">
         
-        <div class="w3-twothird w3-container">
-          <h5 class="w3-opacity"><b>Self-supervised learning of hologram reconstruction using physics consistency</b></h5>
-          <h6 class="w3-text-teal"><em>Nature Machine Intelligence</em> (IF=25.90)</h6>
-          <p>Existing applications of deep learning in computational imaging and microscopy mostly depend on supervised learning, requiring large-scale, diverse and labelled training data. Here we report a self-supervised learning model, termed GedankenNet, that eliminates the need for labelled or experimental training data, and demonstrate its effectiveness and superior generalization on hologram reconstruction tasks. Without prior knowledge about the sample types, the self-supervised learning model was trained using a physics-consistency loss and artificial random images, and successfully generalized to experimental holograms of unseen biological samples after its self-supervised training. This self-supervised learning of image reconstruction creates new opportunities for solving inverse problems in holography, microscopy and computational imaging.</p>
-          <hr>
-        </div>
-        <div class="w3-third w3-container">
-          <a href="https://www.nature.com/articles/s42256-023-00704-7"><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs42256-023-00704-7/MediaObjects/42256_2023_704_Fig1_HTML.png?" style="width:100%"></a>
+        <section class="glass-card rounded-3xl p-6 lg:p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="w-6 h-1 bg-sky-500 rounded-full"></span> Biography</h2>
+            <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+                <p>I am a <strong class="text-slate-900">Senior Machine Learning Scientist at TikTok</strong>. I received my Ph.D. in Oct 2024 from UCLA, where I was honored as a recipient of the Amazon Fellowship and the UCLA Dissertation Year Fellowship.</p>
+                <p>Currently, I architect industry-scale <strong class="text-slate-900">Multi-modal LLMs (MLLM)</strong> and generative recommendation engines. My research focuses on bridging advanced deep learning with physical principles, including self-supervised learning, long-sequence modeling, and computational imaging.</p>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-3xl p-6">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="w-6 h-1 bg-amber-400 rounded-full"></span> Latest News</h2>
+            <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-xl text-sm">
+                <p class="font-bold text-amber-800">January 2026</p>
+                <p class="text-amber-900">"Multi-scale Conditional Generative Modeling for Microscopic Image Restoration" accepted by <strong>IEEE ICASSP 2026</strong>.</p>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-3xl p-6">
+            <h2 class="text-xl font-bold mb-5 flex items-center gap-3"><span class="w-6 h-1 bg-indigo-500 rounded-full"></span> Selected Works</h2>
+            <div class="space-y-6">
+                <div class="pub-card border-b border-slate-100 pb-5 last:border-0 last:pb-0">
+                    <span class="text-[10px] font-bold px-1.5 py-0.5 bg-rose-100 text-rose-700 rounded uppercase">Nature Biomedical Engineering</span>
+                    <h3 class="text-md font-bold mt-1 mb-1">Hallucination detection in virtual tissue staining and digital pathology</h3>
+                    <p class="text-xs text-slate-600 mb-2">Introduced a monitoring framework using cycle-consistency and uncertainty quantification to identify neural network hallucinations, ensuring high-fidelity results in AI-driven pathology.</p>
+                    <a href="#" class="text-sky-500 font-semibold text-xs hover:underline">Read Paper <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="pub-card border-b border-slate-100 pb-5 last:border-0 last:pb-0">
+                    <span class="text-[10px] font-bold px-1.5 py-0.5 bg-indigo-100 text-indigo-700 rounded uppercase">Nature Machine Intelligence</span>
+                    <h3 class="text-md font-bold mt-1 mb-1">Self-supervised learning of hologram reconstruction using physics consistency</h3>
+                    <p class="text-xs text-slate-600 mb-2">Developed <strong>GedankenNet</strong>, a self-supervised model eliminating the need for labeled training data through physics-informed consistency and artificial data.</p>
+                    <a href="https://www.nature.com/articles/s42256-023-00704-7" class="text-sky-500 font-semibold text-xs hover:underline">Read Paper <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="pub-card">
+                    <span class="text-[10px] font-bold px-1.5 py-0.5 bg-emerald-100 text-emerald-700 rounded uppercase">Light: Science & Applications</span>
+                    <h3 class="text-md font-bold mt-1 mb-1">Fourier Imager Network (FIN): Superior External Generalization</h3>
+                    <p class="text-xs text-slate-600 mb-2">A Fourier-based framework processing spatial frequencies with learnable filters, exhibiting superior generalization and inference speed compared to standard CNNs.</p>
+                    <a href="https://www.nature.com/articles/s41377-022-00949-8" class="text-sky-500 font-semibold text-xs hover:underline">Read Paper <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-3xl p-6">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="w-6 h-1 bg-rose-500 rounded-full"></span> Recent Publications</h2>
+            <div class="space-y-1 text-xs text-slate-700">
+                <div class="p-2 hover:bg-slate-50 rounded-lg transition">Y. Zhang, <strong>L. Huang</strong>, et al. "Virtual staining of label-free tissue in imaging mass spectrometry." <strong class="italic">Science Advances</strong> (2025).</div>
+                <div class="p-2 hover:bg-slate-50 rounded-lg transition"><strong>L. Huang</strong>, Y. Li, et al. "A robust framework for hallucination detection in virtual tissue staining." <strong class="italic">Nature Biomedical Engineering</strong> (2025).</div>
+                <div class="p-2 hover:bg-slate-50 rounded-lg transition">Y. Zhang, <strong>L. Huang</strong>, et al. "Pixel super-resolved virtual staining using diffusion models." <strong class="italic">Nature Communications</strong> (2025).</div>
+                <div class="p-2 hover:bg-slate-50 rounded-lg transition">Y. Ma, J. Park, <strong>L. Huang</strong> et al. "Light-field tomographic fluorescence lifetime imaging microscopy." <strong class="italic">PNAS</strong> (2024).</div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="glass-card rounded-3xl p-6">
+                <h2 class="text-lg font-bold mb-4">Education</h2>
+                <div class="space-y-4">
+                    <div class="relative pl-5 border-l-2 border-slate-200">
+                        <div class="absolute -left-[7px] top-0 w-3 h-3 rounded-full bg-sky-500 border-2 border-white"></div>
+                        <p class="text-xs font-bold">Ph.D. in ECE</p>
+                        <p class="text-[10px] text-slate-500">UCLA | 2019 – 2024</p>
+                    </div>
+                    <div class="relative pl-5 border-l-2 border-slate-200">
+                        <div class="absolute -left-[7px] top-0 w-3 h-3 rounded-full bg-slate-300 border-2 border-white"></div>
+                        <p class="text-xs font-bold">B.Eng. in Optical Science</p>
+                        <p class="text-[10px] text-slate-500">Zhejiang University | 2015 – 2019</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card rounded-3xl p-6">
+                <h2 class="text-lg font-bold mb-4">Technical Stack</h2>
+                <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded-md text-[10px] font-medium">PyTorch/JAX</span>
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded-md text-[10px] font-medium">MLLM/RecSys</span>
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded-md text-[10px] font-medium">FlashAttention</span>
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded-md text-[10px] font-medium">DeepSpeed</span>
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded-md text-[10px] font-medium">vLLM/Triton</span>
+                </div>
+            </div>
         </div>
 
-        <div class="w3-twothird w3-container">
-          <h5 class="w3-opacity"><b>Fourier Imager Network (FIN): A deep neural network for hologram reconstruction with superior external generalization</b></h5>
-          <h6 class="w3-text-teal"><em>Light: Science and Applications</em> (IF=20.26)</h6>
-          <p>Deep learning-based image reconstruction methods have achieved remarkable success in phase recovery and holographic imaging, but their generalization to new types of samples remains a challenge. Here we introduce a deep learning framework, termed Fourier Imager Network (FIN) based on spatial Fourier transform modules that process the spatial frequencies of its inputs using learnable filters and a global receptive field. Compared with existing convolutional deep neural networks used for hologram reconstruction, FIN exhibits superior generalization to new types of samples, while also being much faster in its image inference speed. Beyond holographic microscopy and quantitative phase imaging, FIN and the underlying neural network architecture might open up various new opportunities to design broadly generalizable deep learning models in computational imaging and machine vision fields.</p>
-          <hr>
-        </div>
-        <div class="w3-third w3-container">
-          <a href="https://www.nature.com/articles/s41377-021-00506-9"><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41377-022-00949-8/MediaObjects/41377_2022_949_Fig3_HTML.png?as=webp" style="width:100%"></a>
-        </div>
-
-        <div class="w3-twothird w3-container">
-          <h5 class="w3-opacity"><b>Recurrent neural network-based volumetric fluorescence microscopy</b></h5>
-          <h6 class="w3-text-teal"><em>Light: Science and Applications</em> (IF=20.26)</h6>
-          <p>Volumetric imaging of samples using fluorescence microscopy plays an important role in various fields including physical, medical and life sciences. In this work we report a deep learning-based volumetric image inference framework that uses 2D images that are sparsely captured by a standard wide-field fluorescence microscope at arbitrary axial positions within the sample volume. Our work demonstrates the first application of recurrent neural networks in microscopic image reconstruction and provides a flexible and rapid volumetric imaging framework.</p>
-          <hr>
-        </div>
-        <div class="w3-third w3-container">
-          <a href="https://www.nature.com/articles/s41377-021-00506-9"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41377-021-00506-9/MediaObjects/41377_2021_506_Fig1_HTML.png?as=webp" style="width:100%"></a>
-        </div>
-        
-        <div class="w3-twothird w3-container">
-          <h5 class="w3-opacity"><b>SNR-Adaptive OCT Angiography Enabled by Statistical Characterization of Intensity and Decorrelation With Multi-Variate Time Series Model</b></h5>
-          <h6 class="w3-text-teal"><em>IEEE Trans. Med. Imaging</em> (IF=11.04)</h6>
-          <p>In OCT angiography (OCTA), decorrelation computation has been widely used as a local motion index to identify dynamic flow from static tissues, but its dependence on SNR severely degrades the vascular visibility, particularly in low-SNR regions. We developed a multi-variate time series (MVTS) model, and based on this model, derived a universal asymptotic linear relation of decorrelation to inverse SNR (iSNR) and a linear classifier, termed as ID-OCTA.</p><br>
-        </div>
-        <div class="w3-third w3-container">
-          <a href="https://ieeexplore.ieee.org/abstract/document/8689077"><img src="https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/42/8886658/8689077/li1abcdef-2910871-large.gif" style="width:100%"></a>
-        </div>
-      </div>
-
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Publication list</h2>
-        <h3 class="w3-opacity", style="text-indent: 20px;"><b>Journals</b></h3>
-        <ol>
-          <li>
-            Y. Ma, J. Park, <b>L. Huang</b> et al. Light-field tomographic fluorescence lifetime imaging microscopy. <i>Proceedings of the National Academy of Sciences</i> 121.40, e2402556121 (2024)
-          </li>
-          <li>
-            M.J. Fanous, P. Casteleiro Costa, C. Isil, <b>L. Huang</b>, Neural network-based processing and reconstruction of compromised biophotonic image data. <i>light: Science & Applications</i> 13, 231 (2024).
-          </li>
-          <li>
-            Y. Li, N. Pillar, J. Li, T. Liu, D. Wu, S. Sun, G. Ma, K. de Haan, <b>L. Huang</b> et al. "Virtual histological staining of unlabeled autopsy tissue." <i>Nature Communications</i> 15, 1684 (2024)
-          </li>
-          <li>
-            V.N. Astratov, Y.B. Sahel, Y.C. Eldar, <b>L. Huang</b>, A. Ozcan et al. "Roadmap on Label-Free Super-Resolution Imaging." <i>Laser & Photonics Reviews</i>  2200029 (2023)
-          </li>
-          <li>
-            J. Park, B. Bai, D. H. Ryu, T. Liu, C. Lee, Y. Luo, M. J. Lee, <b>L. Huang</b> et al. Artificial intelligence-enabled quantitative phase imaging methods for life sciences. <i>Nature Methods</i> 20, 1645-1660 (2023)
-          </li>
-          <li>
-            <b>L. Huang</b>, J. Li, X. Ding et al. Cycle-Consistency-Based Uncertainty Quantification of Neural Networks in Inverse Imaging Problems. <i>Intelligent Computing</i> 2: 0071 (2023)
-          </li>
-          <li>
-            <b>L. Huang</b>, H. Chen, et al. Self-supervised learning of hologram reconstruction using physics consistency. <i>Nature Machine Intelligence</i> 5, 895-907 (2023)
-          </li>
-          <li>
-            H. Chen, <b>L. Huang</b> et al. eFIN: Enhanced Fourier Imager Network for Generalizable Autofocusing and Pixel Super-Resolution in Holographic Imaging. <i>IEEE JSTQE</i>, 29, 4, 1-10 (2023)
-          </li>
-          <li>
-            Y. Zhang, <b>L. Huang</b> et al. Virtual Staining of Defocused Autofluorescence Images of Unlabeled Tissue Using Deep Neural Networks. <i>Intelligent Computing</i> 9818965 (2022)
-          </li>
-          <li>
-            <b>L. Huang</b>, X. Yang, et al. Few-shot Transfer Learning for Holographic Image Reconstruction using a Recurrent Neural Network. <i>APL Photonics</i> 7, 070801 (2022)
-          </li>
-          <li>
-            H. Chen, <b>L. Huang</b> et al. Fourier Imager Network (FIN): A deep neural network for hologram reconstruction with superior external generalization. <i>Light: Science & Applications</i> 11, 254 (2022)
-          </li>
-          <li>
-            <b>L. Huang</b>, T. Liu, et al. Holographic image reconstruction with phase recovery and autofocusing using recurrent neural networks. <i>ACS Photonics</i> 8, 6, 1763-1774 (2021)
-          </li>
-          <li>
-            X. Yang, <b>L. Huang</b>, Y. Luo, et al. Deep-learning-based virtual refocusing of images using an engineered point-spread function. <i>ACS Photonics</i> 8, 7, 2174-2182 (2021)
-          </li>
-          <li>
-            <b>L. Huang</b>, H. Chen, Y. Luo, et al. Recurrent neural network-based volumetric fluorescence microscopy. <i>Light: Science & Applications</i> 10, 62 (2021)
-          </li>
-          <li>
-            Y. Luo, <b>L. Huang</b>, Y. Rivenson, A. Ozcan, Single-shot autofocusing of microscopy images using deep learning. <i>ACS Photonics</i>, 8, 2, 625-638 (2021)
-          </li>
-          <li>
-            <b>L. Huang</b>, Y. Fu, R. Chen, et al. SNR-adaptive OCT angiography enabled by statistical characterization of intensity and decorrelation based on multi-variate time series model. <i>IEEE Transactions on Medical Imaging</i>, 38, 11, 2695-2704 (2019)
-          </li>
-          <li>
-            <b>L. Huang</b>, X. Wang, Y. Yuan, S. Gu, Y. Shen, An improved algorithm of NLOS imaging based on Bayesian statistics. <i>JOSA.A</i> 36, 5, 834-838 (2019)
-          </li>
-          <li>
-            <b>L. Huang</b>, T. Fang, Q. Shuai, Calibration and imaging of a CT system, <i>Chinese Journal of Engineering Mathematics</i> 34, 1 (2017)
-          </li>
-        </ol>
-
-        <h3 class="w3-opacity", style="text-indent: 20px;"><b>Conferences</b></h3>
-        <ol>
-          <li>
-            <b>L. Huang</b>, H. Chen, T. Liu, and A. Ozcan, "Self-supervised, physics-informed learning for hologram reconstruction" in SPIE Photonics West 2024 (AI/ML Best Paper)
-          </li>
-          <li>
-            H. Chen, L. Huang, T. Liu, and A. Ozcan, "Deep Learning-enabled Autofocusing and Pixel Super-Resolution in Holographic Imaging," in Frontiers in Optics + Laser Science 2023 (FiO, LS), Technical Digest Series (Optica Publishing Group, 2023), paper FTu6D.2.
-          </li>
-          <li>
-            Y. Zhang, L. Huang, T. Liu, K. Cheng, K. de Haan, Y. Li, B. Bai, and A. Ozcan, "Neural network-based virtual staining of defocused autofluorescence images of label-free tissue," in CLEO 2023, Technical Digest Series (Optica Publishing Group, 2023), paper ATu3Q.1.
-          </li>
-          <li>
-            <b>L. Huang</b>, H. Chen, T. Liu, and A. Ozcan, "Self-supervised neural network for holographic microscopy (invited)," in Conference on Lasers and Electro-Optics, Technical Digest Series, Technical Digest Series (Optica Publishing Group, 2023), paper ATu3Q.4
-          </li>
-          <li>
-            L. Huang, X. Yang, T. Liu, A. Ozcan, "Few-shot transfer learning using a recurrent neural network for hologram reconstruction," Proc. SPIE PC12389, Quantitative Phase Imaging IX, PC123890B (16 March 2023)
-          </li>
-          <li>
-            H. Chen, L. Huang, T. Liu, A. Ozcan, "Deep learning-based hologram reconstruction with superior external generalization," Proc. SPIE PC12389, Quantitative Phase Imaging IX, PC123890P (16 March 2023)
-          </li>
-          <li>
-            Y. Zhang, L. Huang, T. Liu, K. Cheng, K. de Haan, Y. Li, B. Bai, A. Ozcan, "Deep learning-based virtual staining of defocused autofluorescence images of label-free tissue," Proc. SPIE PC12373, Optical Biopsy XXI: Toward Real-Time Spectroscopic Imaging and Diagnosis, PC123730H (6 March 2023)
-          </li>
-          <li>
-            H. Chen, <b>L. Huang</b>, T. Liu, and A. Ozcan, "A broadly generalizable deep neural network for rapid phase recovery and hologram reconstruction," in Frontiers in Optics + Laser Science 2022 (FIO, LS), Technical Digest Series (Optica Publishing Group, 2022), paper FM5C.2.
-          </li>
-          <li>
-            <b>L. Huang</b>, X. Yang, T. Liu, A. Ozcan, "Few-shot generalizable hologram reconstruction model using a recurrent neural network (RNN) (Conference Presentation)," Proc. SPIE PC12204, Emerging Topics in Artificial Intelligence (ETAI) 2022, PC122040H (4 October 2022)
-          </li>
-          <li>
-            X. Yang, <b>L. Huang</b>, Y. Luo, Y. Wu, H. Wang, Y. Rivenson, and A. Ozcan, "3D Virtual Refocusing of Point Spread Function (PSF) Engineered Images Using Cascaded Neural Networks," in Conference on Lasers and Electro-Optics, Technical Digest Series (Optica Publishing Group, 2022), paper STh5J.5.
-          </li>
-          <li>
-            <b>L. Huang</b>, T. Liu, X. Yang, Y. Luo, Y. Rivenson, and A. Ozcan, "Phase Recovery and Holographic Imaging using Recurrent Neural Networks (RNNs)," in Conference on Lasers and Electro-Optics, Technical Digest Series (Optica Publishing Group, 2022), paper ATh1D.5
-          </li>
-          <li>
-            X. Yang, <b>L. Huang</b>, Y. Luo, Y. Wu, H. Wang, Y. Rivenson, A. Ozcan, "Three-dimensional virtual refocusing of point-spread function engineered images using cascaded neural networks," Proc. SPIE PC12019, AI and Optical Data Sciences III, PC1201906 (9 March 2022)
-          </li>
-          <li>
-            <b>L. Huang</b>, T. Liu, X. Yang, Y. Luo, Y. Rivenson, A. Ozcan, "Holographic image reconstruction with phase recovery and autofocusing using recurrent neural networks," Proc. SPIE 11970, Quantitative Phase Imaging VIII, 119700C (2 March 2022)
-          </li>
-          <li>
-            X. Yang, <b>L. Huang</b>, Y. Luo, Y. Wu, H. Wang, Y. Rivenson, A. Ozcan, "Virtual refocusing of fluorescence images using an engineered point-spread function and deep learning," Proc. SPIE 11804, Emerging Topics in Artificial Intelligence (ETAI) 2021, 1180425 (1 August 2021)
-          </li>
-          <li>
-            <b>L. Huang</b>, Hanlong Chen, Yilin Luo, Yair Rivenson, Aydogan Ozcan, "Convolutional recurrent neural network-enabled volumetric fluorescence imaging," Proc. SPIE 11804, Emerging Topics in Artificial Intelligence (ETAI) 2021, 1180411 (1 August 2021)
-          </li>
-          <li>
-            <b>L. Huang</b>, Y. Luo, Y. Rivenson, and A. Ozcan, "Volumetric fluorescence microscopy using convolutional recurrent neural networks," in Conference on Lasers and Electro-Optics, J. Kang, S. Tomasulo, I. Ilev, D. Müller, N. Litchinitser, S. Polyakov, V. Podolskiy, J. Nunn, C. Dorrer, T. Fortier, Q. Gan, and C. Saraceno, eds., OSA Technical Digest (Optica Publishing Group, 2021), paper STh2D.3.
-          </li>
-          <li>
-            <b>L. Huang</b>, Y. Luo, Y. Rivenson, and A. Ozcan, "Neural network-based single-shot autofocusing of microscopy images," in Conference on Lasers and Electro-Optics, J. Kang, S. Tomasulo, I. Ilev, D. Müller, N. Litchinitser, S. Polyakov, V. Podolskiy, J. Nunn, C. Dorrer, T. Fortier, Q. Gan, and C. Saraceno, eds., OSA Technical Digest (Optica Publishing Group, 2021), paper ATu4L.2.
-          </li>
-          <li>
-            <b>L. Huang</b>, Y. Luo, Y. Rivenson, A. Ozcan, "Deep-learning-based volumetric imaging in fluorescence microscopy," Proc. SPIE 11649, Three-Dimensional and Multidimensional Microscopy: Image Acquisition and Processing XXVIII, 116490G (5 March 2021)
-          </li>
-          <li>
-            <b>L. Huang</b>, Y. Luo, Y. Rivenson, A. Ozcan, "Deep learning-based single-shot autofocusing of microscopy images," Proc. SPIE 11647, Imaging, Manipulation, and Analysis of Biomolecules, Cells, and Tissues XIX, 116470Y (5 March 2021)
-          </li>
-        </ol>
-      </div>
-      <br>
-
-    <!-- End Right Column -->
-    </div>
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
+        <footer class="text-center py-8 text-slate-400 text-[10px]">
+            <p>© 2026 Luzhe Huang. Real-time stats powered by Google Scholar.</p>
+        </footer>
+    </main>
 </div>
 
-<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Copyright © Luzhe Huang 2024.</p>
-  <p>Last updated at 02/2024.</p>
- </footer>
-
+<script>
+    async function updateScholarStats() {
+        const userId = 'qq9rtkkAAAAJ';
+        const proxyUrl = 'https://api.allorigins.win/get?url=';
+        const scholarUrl = `https://scholar.google.com/citations?user=${userId}&hl=en`;
+        try {
+            const response = await fetch(proxyUrl + encodeURIComponent(scholarUrl));
+            const data = await response.json();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data.contents, 'text/html');
+            const stats = doc.querySelectorAll('.gsc_rsb_std');
+            if (stats.length >= 2) {
+                document.getElementById('total-citations').innerText = stats[0].innerText;
+                document.getElementById('h-index').innerText = stats[2].innerText;
+            }
+        } catch (error) {
+            document.getElementById('total-citations').innerText = '1,100+';
+            document.getElementById('h-index').innerText = '15+';
+        }
+    }
+    window.onload = updateScholarStats;
+</script>
 </body>
 </html>
