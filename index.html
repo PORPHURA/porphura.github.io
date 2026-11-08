@@ -40,18 +40,18 @@
                     <div class="flex items-center gap-3"><i class="fa-brands fa-github w-4 text-sky-400 text-center"></i><a href="https://github.com/PORPHURA">/PORPHURA</a></div>
                 </div>
 
-                <div class="mt-6 pt-6 border-t border-slate-700 grid grid-cols-2 gap-4">
+                <div id="scholar-stats" class="mt-6 pt-6 border-t border-slate-700 grid grid-cols-2 gap-4">
                     <div class="text-center">
-                        <p id="total-citations" class="text-xl font-bold text-white">--</p>
+                        <p id="total-citations" class="text-xl font-bold text-white">1,476</p>
                         <p class="text-[10px] text-slate-400 uppercase tracking-tighter">Citations</p>
                     </div>
                     <div class="text-center">
-                        <p id="h-index" class="text-xl font-bold text-white">--</p>
+                        <p id="h-index" class="text-xl font-bold text-white">19</p>
                         <p class="text-[10px] text-slate-400 uppercase tracking-tighter">h-index</p>
                     </div>
                 </div>
                 
-                <a href="LuzheHuang_CV_2026.4.pdf" class="mt-6 block w-full bg-sky-500 hover:bg-sky-400 text-white font-bold py-2.5 rounded-xl transition shadow-lg text-sm">
+                <a href="LuzheHuang_CV_2026.11.pdf" class="mt-6 block w-full bg-sky-500 hover:bg-sky-400 text-white font-bold py-2.5 rounded-xl transition shadow-lg text-sm">
                     <i class="fa fa-file-pdf mr-2"></i>Download CV
                 </a>
             </div>
@@ -63,8 +63,8 @@
         <section class="glass-card rounded-3xl p-6 lg:p-8">
             <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="w-6 h-1 bg-sky-500 rounded-full"></span> Biography</h2>
             <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
-                <p>I am a <strong class="text-slate-900">Senior Machine Learning Scientist at TikTok</strong>. I received my Ph.D. in Oct 2024 from UCLA, where I was honored as a recipient of the Amazon Fellowship and the UCLA Dissertation Year Fellowship.</p>
-                <p>Currently, I architect industry-scale <strong class="text-slate-900">Multi-modal LLMs (MLLM)</strong> and generative recommendation engines. My research focuses on bridging advanced deep learning with physical principles, including self-supervised learning, long-sequence modeling, and computational imaging.</p>
+                <p>I am a <strong class="text-slate-900">Research Scientist at Meta</strong>. I received my Ph.D. in Oct 2024 from UCLA, where I was honored as a recipient of the Amazon Fellowship and the UCLA Dissertation Year Fellowship.</p>
+                <p>Currently, I architect industry-scale <strong class="text-slate-900">Multi-modal LLMs (MLLM)</strong> and LLM-native recommendation systems. My other research interests include representation learning, self-supervised learning, long-sequence modeling, and computational imaging.</p>
             </div>
         </section>
 
@@ -105,10 +105,8 @@
         <section class="glass-card rounded-3xl p-6">
             <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="w-6 h-1 bg-rose-500 rounded-full"></span> Recent Publications</h2>
             <div class="space-y-1 text-xs text-slate-700">
-                <div class="p-2 hover:bg-slate-50 rounded-lg transition">Y. Zhang, <strong>L. Huang</strong>, et al. "Virtual staining of label-free tissue in imaging mass spectrometry." <strong class="italic">Science Advances</strong> (2025).</div>
-                <div class="p-2 hover:bg-slate-50 rounded-lg transition"><strong>L. Huang</strong>, Y. Li, et al. "A robust framework for hallucination detection in virtual tissue staining." <strong class="italic">Nature Biomedical Engineering</strong> (2025).</div>
-                <div class="p-2 hover:bg-slate-50 rounded-lg transition">Y. Zhang, <strong>L. Huang</strong>, et al. "Pixel super-resolved virtual staining using diffusion models." <strong class="italic">Nature Communications</strong> (2025).</div>
-                <div class="p-2 hover:bg-slate-50 rounded-lg transition">G. Ma, C. Shen, J. Li, <strong>L. Huang</strong> et al. "Unidirectional imaging with partially coherent light." <strong class="italic">PNAS</strong> (2024).</div>
+                <div class="p-2 hover:bg-slate-50 rounded-lg transition">S. Li, <strong>L. Huang</strong>, A. Cheng, et al. "<a href="https://cmsworkshops.com/ICASSP2026/view_paper.php?PaperNum=15586&amp;bare=1" class="hover:text-sky-500 hover:underline">Multi-scale Conditional Generative Modeling for Microscopic Image Restoration</a>." <strong class="italic">IEEE ICASSP</strong> (2026, Oral).</div>
+                <div class="p-2 hover:bg-slate-50 rounded-lg transition">X. Xiao, S. Li, <strong>L. Huang</strong>, et al. "<a href="https://www.cmsworkshops.com/ICASSP2026/view_paper.php?PaperNum=16616&amp;bare=1" class="hover:text-sky-500 hover:underline">Multi-scale Generative Modeling for Fast Sampling</a>." <strong class="italic">IEEE ICASSP</strong> (2026, Oral).</div>
             </div>
         </section>
 
@@ -142,32 +140,10 @@
         </div>
 
         <footer class="text-center py-8 text-slate-400 text-[10px]">
-            <p>© 2026 Luzhe Huang. Real-time stats powered by Google Scholar.</p>
+            <p>© 2026 Luzhe Huang. Stats from <a href="https://scholar.google.com/citations?user=qq9rtkkAAAAJ&amp;hl=en" class="hover:underline">Google Scholar</a>.</p>
         </footer>
     </main>
 </div>
 
-<script>
-    async function updateScholarStats() {
-        const userId = 'qq9rtkkAAAAJ';
-        const proxyUrl = 'https://api.allorigins.win/get?url=';
-        const scholarUrl = `https://scholar.google.com/citations?user=${userId}&hl=en`;
-        try {
-            const response = await fetch(proxyUrl + encodeURIComponent(scholarUrl));
-            const data = await response.json();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(data.contents, 'text/html');
-            const stats = doc.querySelectorAll('.gsc_rsb_std');
-            if (stats.length >= 2) {
-                document.getElementById('total-citations').innerText = stats[0].innerText;
-                document.getElementById('h-index').innerText = stats[2].innerText;
-            }
-        } catch (error) {
-            document.getElementById('total-citations').innerText = '1,100+';
-            document.getElementById('h-index').innerText = '15+';
-        }
-    }
-    window.onload = updateScholarStats;
-</script>
 </body>
 </html>
